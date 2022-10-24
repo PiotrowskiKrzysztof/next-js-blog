@@ -25,6 +25,14 @@ export const Title = styled(Typography)`
   margin-bottom: 4rem;
 `;
 
+export const Arrow = styled(ArrowLong)`
+  fill: ${({ theme }) => theme.colors.Orange};
+  width: 20px;
+  height: 6px;
+  margin-left: 0.75rem;
+  transition: 0.5s;
+`;
+
 export const Link = styled.a`
   font-size: ${({ theme }) => theme.fontSizes.fontSize14};
   line-height: 1.1rem;
@@ -34,17 +42,16 @@ export const Link = styled.a`
   position: absolute;
   bottom: 0;
   right: 0;
+  transition: 0.5s;
+  &:hover {
+    ${Arrow} {
+      margin-left: 1.75rem;
+    }
+  }
 `;
 
 export const Wrapper = styled(StyledBox)`
   row-gap: 5rem;
-`;
-
-export const Arrow = styled(ArrowLong)`
-  fill: ${({ theme }) => theme.colors.Orange};
-  width: 20px;
-  height: 6px;
-  margin-left: 0.75rem;
 `;
 
 export const ImageWrapper = styled.div`

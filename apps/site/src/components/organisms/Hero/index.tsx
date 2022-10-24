@@ -55,7 +55,7 @@ const Hero: React.FC<Props> = ({
             <Typography variant="smallText">
               {mainLink?.label}
             </Typography>
-            <Logo.ArrowLong fontSize="0.5em" />
+            <Styled.Arrow fontSize="0.5em" />
           </Styled.MainNavigation>
         </Styled.NavMainWrapper>
       </Styled.NavSection>

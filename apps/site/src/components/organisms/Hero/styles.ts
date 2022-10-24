@@ -1,5 +1,6 @@
 import Link from "@components/atoms/Link";
 import { Typography } from "@components/styles/Typography";
+import { ArrowLong } from "public/assets/svg";
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
@@ -30,9 +31,8 @@ export const NavSection = styled.div`
   right: 10rem;
   height: 7.5rem;
   border-radius: 0 20px 0 0;
-
   display: grid;
-  grid-template-columns: 6fr 1fr;
+  grid-template-columns: 5fr 1.5fr;
 `;
 
 export const NavListWrapper = styled.div`
@@ -49,6 +49,10 @@ export const NavList = styled.ul`
 
 export const ListItem = styled.li`
   position: relative;
+  transition: 0.5s;
+  &:hover {
+    color: ${({ theme }) => theme.colors.Orange};
+  }
   &:not(:last-of-type) {
     padding-right: 8rem;
     &::after {
@@ -69,6 +73,11 @@ export const ListItemFirst = styled(Typography)`
   color: ${({ theme }) => theme.colors.MediumGrey};
 `;
 
+export const Arrow = styled(ArrowLong)`
+  margin-left: 0.5rem;
+  transition: 0.5s;
+`;
+
 export const NavMainWrapper = styled(Link)`
   background-color: ${({ theme }) => theme.colors.Orange};
   border-radius: 0 1rem 0 0;
@@ -76,10 +85,16 @@ export const NavMainWrapper = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
+  &:hover {
+    ${Arrow} {
+      margin-left: 1.5rem;
+    }
+  }
 `;
 
 export const MainNavigation = styled.div`
   color: ${({ theme }) => theme.colors.White};
   fill: currentColor;
   display: flex;
+  align-items: center;
 `;

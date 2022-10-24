@@ -28,6 +28,10 @@ export const ListItem = styled.li<StyledHeaderProps>`
   margin-left: 2rem;
   color: ${({ theme, isHighlighted }) =>
     isHighlighted ? theme.colors.Orange : "inherit"};
+  transition: 0.5s;
+  &:hover {
+    color: ${({ theme }) => theme.colors.Orange};
+  }
 `;
 
 export const Dot = styled.div<StyledHeaderProps>`
